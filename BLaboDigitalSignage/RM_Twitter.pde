@@ -68,8 +68,8 @@ boolean updateTwitter() {
     }
 
     // 指定ツイートに含まれる画像を取得する（3枚まで）
-    MediaEntity[] tweetMedias = tweetStatus.getMediaEntities();
-    for (int i = 0; i < tweetImages.length; i++) {
+    MediaEntity[] tweetMedias = tweetStatus.getMediaEntities(); //<>//
+    for (int i = 0; i < tweetImages.length; i++) { //<>//
       try {
         tweetImages[i] = pImageToSquare(loadImage(tweetMedias[i].getMediaURLHttps()), CENTER);
       } catch (Exception e) {
